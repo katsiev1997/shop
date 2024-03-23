@@ -81,7 +81,6 @@
 
 .header__links__item--profile {
   border-radius: 50%;
-  overflow: hidden;
 }
 
 .header__links__item:not(:last-child) {
@@ -112,10 +111,14 @@
   mask: url(/img/Menu.svg) no-repeat 50% 50%;
   transition: background-color 0.2s ease-in-out;
 }
+.header__burger:hover::before {
+  transition: background-color 0.2s ease-in-out;
+  background-color: #9466FF;
+}
 
 .header__burger:hover {
-  color: #9466ff;
-  transition: 0.2s ease-in-out color;
+  color: #9466FF;
+  transition: .2s ease-in-out color;
 }
 
 @media (max-width: 800px) {
@@ -128,5 +131,17 @@
     justify-content: flex-end;
     padding-top: 24px;
     padding-bottom: 20px;
+  }
+
+  .header__links__item:nth-child(n+2):nth-child(-n+4) {
+    display: none;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__links__item:not(:last-child) {
+    margin-right: 18px;
   }
 }

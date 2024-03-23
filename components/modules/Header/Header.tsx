@@ -8,7 +8,7 @@ export const Header = () => {
   const { lang, translations } = useLang()
   return (
     <header className='header'>
-      <div className='container header_container'>
+      <div className='container header__container'>
         <button className='btn-reset header__burger'>
           {translations[lang].header.menu_btn}
         </button>
@@ -17,7 +17,7 @@ export const Header = () => {
         </div>
         <ul className='header__links list-reset'>
           <li className='header__links__item'>
-            <button className='header__links__item__btn header__links__item__btn--search' />
+            <button className='btn-reset header__links__item__btn header__links__item__btn--search' />
           </li>
           <li className='header__links__item'>
             <Link
